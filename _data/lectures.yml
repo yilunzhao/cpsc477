@@ -1,0 +1,252 @@
+- date: Tues 01/16/24
+  lecturer:
+    - Arman
+  title:
+    - Course Introduction
+    - Logistics
+  slides: 
+  readings:
+  optional:
+  logistics:
+
+
+- date: Thurs 01/18/24
+  lecturer:
+    - Arman
+  title:
+  slides: 
+  readings:
+  optional:
+  logistics:
+
+- date: Tues 01/23/24
+  lecturer:
+    - Arman
+  title:
+  slides: 
+  readings:
+  optional:
+  logistics:
+
+
+- date: Thurs 01/25/24
+  lecturer:
+    - Arman
+  title:
+  notes:
+  slides: 
+  readings:
+  optional:
+  logistics:
+
+- date: Tues 01/30/24
+  lecturer:
+    - Arman
+  title:
+  slides: 
+  readings:
+  optional:
+  logistics:
+
+
+- date: Thurs 02/01/24
+  lecturer:
+    - Arman
+  title:
+  slides: 
+  readings:
+  optional:
+  logistics:
+
+- date: Tues 02/06/24
+  lecturer:
+    - Arman
+  title:
+  slides: 
+  readings:
+  optional:
+  logistics:
+
+
+- date: Thurs 02/08/24
+  lecturer:
+  title:
+  slides: 
+  readings:
+  optional:
+  logistics:
+
+
+- date: Tues 02/13/24
+  lecturer:
+    - Arman
+  title:
+  slides: 
+  readings:
+  optional:
+  logistics:
+
+
+- date: Thurs 02/15/24
+  lecturer:
+    - Arman
+  title:
+  slides: 
+  readings:
+  optional:
+  logistics:
+
+
+- date: Tues 02/20/24
+  lecturer:
+    - Arman
+  title:
+  slides: 
+  readings:
+  optional:
+  logistics:
+
+
+- date: Thurs 02/22/24
+  lecturer:
+  title:
+  slides: 
+  readings:
+  optional:
+  logistics:
+
+- date: Tues 02/27/24
+  lecturer:
+    - Arman
+  title:
+  slides: 
+  readings:
+  optional:
+  logistics:
+
+- date: Thurs 02/29/24
+  lecturer:
+    - Arman
+  title:
+  slides: 
+  readings:
+  optional:
+  logistics:
+
+- date: Tues 03/05/24
+  lecturer:
+    - Arman
+  title:
+  slides: 
+  readings:
+  optional:
+  logistics:
+
+- date: Thurs 03/07/24
+  lecturer:
+    - Arman
+  title:
+  slides: 
+  readings:
+  optional:
+  logistics:
+
+- date: 03/08/24 - 03/24/24
+  title: >
+    <strong> Spring recess - No classes </strong>
+
+- date: Tues 03/26/24
+  lecturer:
+    - Arman
+  title:
+  slides: 
+  readings:
+  optional:
+  logistics:
+
+- date: Thurs 03/28/24
+  lecturer:
+  title: >
+    <strong> Midterm Exam </strong>
+  recitation:
+
+- date: Tues 04/02/24
+  lecturer: Arman
+  title:
+  slides: 
+  readings:
+  optional:
+  logistics:
+
+- date: Thurs 04/04/24
+  title:
+  slides: 
+  readings:
+  optional:
+  logistics:
+
+
+- date: Tues 04/09/24
+  lecturer: Arman
+  title:
+  slides: 
+  readings:
+  optional:
+  logistics:
+
+- date: Thurs 04/11/24
+  lecturer: Arman
+  title:
+  slides: 
+  readings:
+  optional:
+  logistics:
+
+
+- date: Tues 04/16/24
+  lecturer: Arman
+  title:
+  slides: 
+  readings:
+  optional:
+  logistics:
+
+- date: Thurs 04/18/24
+  lecturer: Arman
+  title: 
+  slides: 
+  readings:
+  optional:
+  logistics:
+
+- date: Tues 04/23/24
+  lecturer: Arman
+  title:
+  slides: 
+  readings:
+  optional:
+  logistics:
+
+- date: Thurs 04/25/24
+  lecturer: Arman
+  title:
+  logistics:
+    - Last meeting of the class
+    - 05/08 Final project due
+
+## Template for guest lectures:
+# - date: Thurs 11/30/23
+#   title: Towards Large Foundation Vision Models
+#   guest:
+#     - name: Neil Houlsby
+#       profile: https://neilhoulsby.github.io/
+#       photo: https://neilhoulsby.github.io/profile.jpg
+#       affil: Google Deepmind
+#   readings:
+#     - Scaling Vision Transformers to 22 Billion Parameters (2023) <a href="https://arxiv.org/abs/2302.05442" traget="_blank">[link]</a>
+#     - From Sparse to Soft Mixtures of Experts (2023) <a href="https://arxiv.org/pdf/2308.00951.pdf" traget="_blank">[link]</a>
+#     - Scaling Vision Transformers (2021) <a href="https://arxiv.org/abs/2106.04560" traget="_blank">[link]</a>
+#   optional:
+#     - PaLI-X- On Scaling up a Multilingual Vision and Language Model <a href="https://arxiv.org/pdf/2305.18565.pdf" traget="_blank">[link]</a>
+#     - PaLI- A Jointly-Scaled Multilingual Language-Image Model <a href="https://arxiv.org/abs/2209.06794" traget="_blank">[link]</a>
+#   slides:

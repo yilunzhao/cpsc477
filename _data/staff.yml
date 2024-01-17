@@ -1,0 +1,44 @@
+Instructors:
+  - name: Arman Cohan
+    email: arman.cohan@yale.edu
+    url: https://armancohan.com
+    office-hours: Tues ___ (by appointment)
+    appointment-url: https://calendly.com/arman-cohan/office-hours
+    location: 17 Hillhouse Room 326
+    image: staff/arman.jpg
+
+TAs:
+  - name: Yilun Zhao
+    email: yilun.zhao@yale.edu
+    url: https://yilunzhao.github.io/
+    office-hours: TBD
+    location: 17 HH 3rd floor common area
+    image: staff/yilun.jpg
+
+  - name: Jake Tae
+    email: jake.tae@yale.edu
+    url: https://jaketae.github.io/
+    office-hours: TBD
+    location: 17 HH 3rd floor common area
+    image: staff/jake.jpg
+
+  - name: Deyuan Li
+    email: deyuan.li@yale.edu
+    url: #TODO
+    office-hours: TBD
+    location: 17 HH 3rd floor common area
+    image: #TODO
+
+  - name: Rohan Thakur
+    email: rohan.thakur@yale.edu
+    url: #TODO
+    office-hours: TBD
+    location: 17 HH 3rd floor common area
+    image: #TODO
+
+  - name: Kejian Shi
+    email: kejian.shi@yale.edu
+    url: 
+    office-hours: TBD
+    location: 17 HH 3rd floor common area
+    image: staff/kejian.jpg
