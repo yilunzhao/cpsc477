@@ -28,7 +28,7 @@ The papers will be mostly from major conferences in the field including ACL, EMN
 
 ***
 
-- **Lectures:** Tue/Thu 2:30PM - 3:45PM
+- **Lectures:** Tue/Thur 2:30PM - 3:45PM
 - **Lecture Location:**  Osborn Memorial Laboratories 202
 <!-- - **Office Hours Location:** [Gates-Hillman Center 8228](https://goo.gl/maps/74vUj6uoaTTzYM937){:target="\_blank"} -->
 <!-- - **Discussion:** [Piazza](https://piazza.com){:target="\_blank"} -->
