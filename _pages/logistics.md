@@ -23,13 +23,16 @@ Through a blend of lectures, hands-on projects and assignments, and case studies
 
 #### Textbook
 
-There is no required textbook and we will be mostly reading publicly available research papers. 
-The papers will be mostly from major conferences in the field including ACL, EMNLP, NAACL, ICLR, NeurIPS, etc. 
+- Dan Jurafsky and James H. Martin. Speech and Language Processing (2024 pre-release)
+- Yoav Goldberg. A Primer on Neural Network Models for Natural Language Processing
+- Jacob Eisenstein. Natural Language Processing
+
+We will also using papers from major conferences in the field including ACL, EMNLP, NAACL, ICLR, NeurIPS, etc. 
 
 
 ### Anonymous feedback
 
-If you wish to share comments, questions, or feedback anonymously please use this form: [Anonymous Form](https://docs.google.com/forms/u/1/d/e/1FAIpQLSfSw6DvGu6UNwfAyMxtrrwVRXVlx0Flpy-VY0lO1IjwQBBZ8g/viewform?usp=send_form).  
+If you wish to share comments, questions, or feedback anonymously please use this form: [Anonymous Form](https://forms.gle/KNuS32Ns69GEorrh7).  
 I will check this regularly and respond to questions/comments.
 
 ### Communication
@@ -49,18 +52,20 @@ Final grades will be comprised of:
 - 40%: Final projects, including a project proposal (5%), project final presentation (15%), project final report (15%), code and reproducibility checklist (5%)
 - Grading for graduate students: Graduate students will need to incorporate a novelty element and a more in-depth literature review in their final projects
 
-**AI Assistant policies**
+### AI Assistant policies
 
 Using assistance from AIs such as ChatGPT to complete your homeworks, quizzes, projects, and exam is not allowed except for the following circumstances:
 
 - The assignment explicitly asks for it
 - AI Assistant is used to improve writing or check grammar. If you take advantage of any sort of AI assistance for an assignment, you should explicitly mention how you used AI when submitting the assignment. 
 
-Employing AI tools to complete assignments in cases other than above or without permission of instructor will be considered a violation of the Honor Code.
+**Employing AI tools to complete assignments in cases other than above or without permission of instructor will be considered a violation of the Honor Code.**
 
-**Late submissions** 
+**Co-pilot and coding assistants are also NOT allowed.**
 
-You can still submit your assignment after the deadlines for up to **5 days**.
+### Late submissions
+
+You can still submit your assignment after the deadlines for up to **3 days**.
 You will, however, receive partial credit for late submissions. Every late day will result in 10% deduction in full credit for that assignment
 
 Note: Late days can only be used on the assignments, and not on the project proposal or the final report and the presentation.
@@ -85,7 +90,7 @@ Students must complete a final research project on a topic of their choice relat
     -   References and appendix won't count towards the page limit
 
 -   **15%**: Final project presentation
-    -  TBD 15 min pre-recorded video? 
+    -  5 minute in person in-class presentations
 
 -   **5%**: Code and reproducibility checklist
     -   Your project code should be clean, readable, with clear running instructions, and the results should be fully reproducible. We will provide a reproducibility checklist that should be returned.
@@ -94,3 +99,6 @@ Students must complete a final research project on a topic of their choice relat
 ## Integrity
 
 [Academic integrity](http://catalog.yale.edu/undergraduate-regulations/regulations/academic-dishonesty/) requires that students at Yale acknowledge all of the sources that inform their coursework. Most commonly, this means (a) citing the sources of any text or data that you include in papers and projects, and (b) only collaborating with other students or using AI composition software in ways that are explicitly endorsed by the assignment. Yale’s dedication to academic integrity flows from our two primary commitments: supporting research and educating students to contribute to ongoing scholarship. A safe and ethical climate for research demands that previous authors and artists receive credit for their work. And learning requires that you do your own work. Conventions for acknowledging sources vary across disciplines, and instructors should instruct you in the forms they expect; they should also delineate which forms of collaboration among students are permitted. But ultimately it is the student’s responsibility to act with integrity, and the burden is on you to ask questions if anything about course policies is unclear.
+
+## Diversity statement
+We embrace and celebrate diversity, understanding that the richest learning experiences come from the exchange of ideas among individuals from varied backgrounds, cultures, and perspectives. We uphold a commitment to mutual respect and open-mindedness, encouraging each participant to both share their unique insights and actively listen to others. Recognizing that learning is a collaborative and evolving process, we foster an inclusive environment where constructive criticism is welcomed, mistakes are embraced as opportunities for growth, and every student is both a teacher and a learner. Our goal is to cultivate a dynamic, respectful, and inclusive classroom environment. 

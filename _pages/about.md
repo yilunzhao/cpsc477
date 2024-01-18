@@ -22,8 +22,11 @@ Intro to AI or Intro to Machine Learning or permission of instructor.
 
 **Resources** 
 
-There is no required textbook and we will be mostly reading publicly available research papers. 
-The papers will be mostly from major conferences in the field including ACL, EMNLP, NAACL, ICLR, NeurIPS, etc. 
+- Dan Jurafsky and James H. Martin. Speech and Language Processing (2024 pre-release)
+- Yoav Goldberg. A Primer on Neural Network Models for Natural Language Processing
+- Jacob Eisenstein. Natural Language Processing
+
+We will also using papers from major conferences in the field including ACL, EMNLP, NAACL, ICLR, NeurIPS, etc. 
 
 
 ***

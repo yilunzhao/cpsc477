@@ -15,19 +15,19 @@ TAs:
     location: 17 HH 3rd floor common area
     image: staff/yilun.jpg
 
-  - name: Jake Tae
-    email: jake.tae@yale.edu
-    url: https://jaketae.github.io/
-    office-hours: TBD
-    location: 17 HH 3rd floor common area
-    image: staff/jake.jpg
-
   - name: Wenni Fan
     email: wenni.fan@yale.edu
     url: https://www.linkedin.com/in/wenni-fan-40a6161a5/
     office-hours: TBD
     location: 17 HH 3rd floor common area
     image: staff/wenni.jpg
+
+  - name: Jake Tae
+    email: jake.tae@yale.edu
+    url: https://jaketae.github.io/
+    office-hours: TBD
+    location: 17 HH 3rd floor common area
+    image: staff/jake.jpg
 
   - name: Rohan Thakur
     email: rohan.thakur@yale.edu

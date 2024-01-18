@@ -48,7 +48,7 @@
   readings:
     - Jurafsky & Martin Chapter 3
   optional:
-  logistics:
+  logistics: HW1 out
 
 - date: Tues 01/30/24
   lecturer:
@@ -80,7 +80,7 @@
   slides:
   readings:
   optional:
-  logistics:
+  logistics: HW 2 out
 
 - date: Thu 02/08/24
   lecturer:
@@ -90,7 +90,7 @@
   slides:
   readings:
   optional:
-  logistics:
+  logistics: HW 1 due; <br/> <strong>2/9</strong> Project teams due
 
 - date: Tues 02/13/24
   lecturer:
@@ -134,7 +134,7 @@
   slides:
   readings:
   optional:
-  logistics:
+  logistics: HW 2 due
 
 - date: Tues 02/27/24
   lecturer:
@@ -145,7 +145,7 @@
   slides:
   readings:
   optional:
-  logistics:
+  logistics: HW 3 out
 
 - date: Thu 02/29/24
   lecturer:
@@ -157,7 +157,7 @@
   slides:
   readings:
   optional:
-  logistics:
+  logistics: <strong>3/1</strong> Project proposal due
 
 - date: Tues 03/05/24
   lecturer:
@@ -195,6 +195,7 @@
   title:
     - Information retrieval and search
   recitation:
+  logistics: HW3 due
 
 - date: Tues 04/02/24
   lecturer: Arman
@@ -203,7 +204,7 @@
   slides:
   readings:
   optional:
-  logistics:
+  logistics: HW 4 out
 
 - date: Thu 04/04/24
   title:
@@ -217,8 +218,8 @@
 - date: Tues 04/09/24
   lecturer: Arman
   title:
-    - Question answering
-    - Summarization
+    - Reinforcement learning
+    - Aligment
   slides:
   readings:
   optional:
@@ -250,7 +251,7 @@
   slides:
   readings:
   optional:
-  logistics:
+  logistics: HW 4 due
 
 - date: Tues 04/23/24
   lecturer: Arman
@@ -266,8 +267,7 @@
   title:
     - Project presentations
   logistics:
-    - Last meeting of the class
-    - 05/08 Final project due
+    - Last meeting of the class; <br/> <strong>5/8</strong> Final project due
 ## Template for guest lectures:
 # - date: Thu 11/30/23
 #   title: Towards Large Foundation Vision Models
