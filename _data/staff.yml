@@ -22,13 +22,6 @@ TAs:
     location: 17 HH 3rd floor common area
     image: staff/jake.jpg
 
-  - name: Deyuan Li
-    email: deyuan.li@yale.edu
-    url: https://www.linkedin.com/in/deyuan-li/
-    office-hours: TBD
-    location: 17 HH 3rd floor common area
-    image: staff/deyuan.jpg
-
   - name: Rohan Thakur
     email: rohan.thakur@yale.edu
     url: https://www.linkedin.com/in/rohan-thakur-8a471a293/
@@ -38,7 +31,27 @@ TAs:
 
   - name: Kejian Shi
     email: kejian.shi@yale.edu
-    url: 
+    url: https://www.linkedin.com/in/kejian-shi/
     office-hours: TBD
     location: 17 HH 3rd floor common area
     image: staff/kejian.jpg
+
+  - name: Deyuan Li
+    email: deyuan.li@yale.edu
+    url: https://www.linkedin.com/in/deyuan-li/
+    office-hours: TBD
+    location: 17 HH 3rd floor common area
+    image: staff/deyuan.jpg
+
+  - name: Wenni Fan
+    email: wenni.fan@yale.edu
+    url: https://www.linkedin.com/in/wenni-fan-40a6161a5/
+    office-hours: TBD
+    location: 17 HH 3rd floor common area
+    image: staff/wenni.jpg
+
+  - name: Heyuan Huang
+    email: heyuan.huang@yale.edu
+    url: 
+    image: staff/heyuan.jpg
+    
