@@ -2,7 +2,7 @@
 layout: schedule
 permalink: /schedule/
 title: Schedule
-description: Note - Due to the fast-moving nature of the field, we may change some of the topics with two weeks' notice.
+description: Note - This schedule is tentative and subject to change as the semester progresses.
 ---
 
 {% assign current_module = 0 %}

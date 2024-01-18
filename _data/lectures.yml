@@ -4,18 +4,23 @@
   title:
     - Course Introduction
     - Logistics
-  slides: 
+  slides:
+    - https://yaleedu-my.sharepoint.com/:b:/g/personal/arman_cohan_yale_edu/ETCct0hAG_5ArJrmp9dmCXkBxAC3FohCPCG3598pGJW5zg?e=xFSggj
   readings:
+    - Jurafsky & Martin Chapter 1
   optional:
   logistics:
 
-
-- date: Thurs 01/18/24
+- date: Thu 01/18/24
   lecturer:
     - Arman
   title:
-  slides: 
+    - Text classification
+    - Generative Models vs Discriminative Models
+  slides:
+    - https://yaleedu-my.sharepoint.com/:b:/g/personal/arman_cohan_yale_edu/EcxUZBofuW1DlRYjj5qT1YABaTCCo40PXx1VcZ_Ql1fp4w?e=w4wWEz
   readings:
+    - Jurafsky & Martin Chapter 4 & 5
   optional:
   logistics:
 
@@ -23,19 +28,25 @@
   lecturer:
     - Arman
   title:
-  slides: 
+    - Text classification (cont.)
+    - Evaluation
+    - N-Gram Language Models
+  slides:
   readings:
+    - Jurafsky & Martin Chapter 4
+    - Jurafsky & Martin Chapter 3
   optional:
   logistics:
 
-
-- date: Thurs 01/25/24
+- date: Thu 01/25/24
   lecturer:
     - Arman
   title:
+    - Word embeddings
   notes:
-  slides: 
+  slides:
   readings:
+    - Jurafsky & Martin Chapter 3
   optional:
   logistics:
 
@@ -43,17 +54,19 @@
   lecturer:
     - Arman
   title:
-  slides: 
+    - Entropy and information theory
+  slides:
   readings:
   optional:
   logistics:
 
-
-- date: Thurs 02/01/24
+- date: Thu 02/01/24
   lecturer:
     - Arman
   title:
-  slides: 
+    - Context-Free Grammars and Constituency Parsing
+    - Dependency Parsing
+  slides:
   readings:
   optional:
   logistics:
@@ -62,55 +75,63 @@
   lecturer:
     - Arman
   title:
-  slides: 
+    - Hidden Markov Models
+    - Structured prediction
+  slides:
   readings:
   optional:
   logistics:
 
-
-- date: Thurs 02/08/24
+- date: Thu 02/08/24
   lecturer:
   title:
-  slides: 
+    - Neural Networks
+    - Neural Language Models
+  slides:
   readings:
   optional:
   logistics:
-
 
 - date: Tues 02/13/24
   lecturer:
     - Arman
   title:
-  slides: 
+    - Task specific neural architecutes
+    - RNNs and CNNs
+    - Machine translation
+  slides:
   readings:
   optional:
   logistics:
 
-
-- date: Thurs 02/15/24
+- date: Thu 02/15/24
   lecturer:
     - Arman
   title:
-  slides: 
+    - Machine translation (cont.)
+    - Transformers
+  slides:
   readings:
   optional:
   logistics:
-
 
 - date: Tues 02/20/24
   lecturer:
     - Arman
   title:
-  slides: 
+    - Transformers (cont.)
+    - Complexity analysis and efficiency
+  slides:
   readings:
   optional:
   logistics:
 
-
-- date: Thurs 02/22/24
+- date: Thu 02/22/24
   lecturer:
   title:
-  slides: 
+    - Pretraining
+    - Transfer learning
+  slides:
   readings:
   optional:
   logistics:
@@ -119,16 +140,21 @@
   lecturer:
     - Arman
   title:
-  slides: 
+    - Sentence representation learning
+    - Document representation learning
+  slides:
   readings:
   optional:
   logistics:
 
-- date: Thurs 02/29/24
+- date: Thu 02/29/24
   lecturer:
     - Arman
   title:
-  slides: 
+    - Decoding methods
+    - Coreference resolution
+    - Information extraction
+  slides:
   readings:
   optional:
   logistics:
@@ -136,17 +162,16 @@
 - date: Tues 03/05/24
   lecturer:
     - Arman
-  title:
-  slides: 
-  readings:
-  optional:
-  logistics:
+  title: >
+    <strong> Midterm Exam </strong>
 
-- date: Thurs 03/07/24
+- date: Thu 03/07/24
   lecturer:
     - Arman
   title:
-  slides: 
+    - Large language models and impact of scale
+    - In-context learning and prompting
+  slides:
   readings:
   optional:
   logistics:
@@ -159,62 +184,70 @@
   lecturer:
     - Arman
   title:
-  slides: 
+    - Parameter-efficient fine-tuning
+  slides:
   readings:
   optional:
   logistics:
 
-- date: Thurs 03/28/24
+- date: Thu 03/28/24
   lecturer:
-  title: >
-    <strong> Midterm Exam </strong>
+  title:
+    - Information retrieval and search
   recitation:
 
 - date: Tues 04/02/24
   lecturer: Arman
   title:
-  slides: 
+    - Retreival-based language models
+  slides:
   readings:
   optional:
   logistics:
 
-- date: Thurs 04/04/24
+- date: Thu 04/04/24
   title:
-  slides: 
+    - Large language models and impact of scale
+    - In-context learning and prompting
+  slides:
   readings:
   optional:
   logistics:
-
 
 - date: Tues 04/09/24
   lecturer: Arman
   title:
-  slides: 
+    - Question answering
+    - Summarization
+  slides:
   readings:
   optional:
   logistics:
 
-- date: Thurs 04/11/24
+- date: Thu 04/11/24
   lecturer: Arman
   title:
-  slides: 
+    - Language model training
+    - Language model evaluation and probing
+  slides:
   readings:
   optional:
   logistics:
-
 
 - date: Tues 04/16/24
   lecturer: Arman
   title:
-  slides: 
+    - Guest lecture 1
+  slides:
   readings:
   optional:
   logistics:
 
-- date: Thurs 04/18/24
+- date: Thu 04/18/24
   lecturer: Arman
-  title: 
-  slides: 
+  title:
+    - Guest lecture 2
+  slides:
   readings:
   optional:
   logistics:
@@ -222,20 +255,21 @@
 - date: Tues 04/23/24
   lecturer: Arman
   title:
-  slides: 
+    - Project presentations
+  slides:
   readings:
   optional:
   logistics:
 
-- date: Thurs 04/25/24
+- date: Thu 04/25/24
   lecturer: Arman
   title:
+    - Project presentations
   logistics:
     - Last meeting of the class
     - 05/08 Final project due
-
 ## Template for guest lectures:
-# - date: Thurs 11/30/23
+# - date: Thu 11/30/23
 #   title: Towards Large Foundation Vision Models
 #   guest:
 #     - name: Neil Houlsby
