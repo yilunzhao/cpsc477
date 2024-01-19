@@ -23,10 +23,12 @@
 %instructor-profile {
     display: block;
     float: left;
-    height: 210px;
+    height: 310px;
+    padding-right: 1pt;
 
     @media screen and (min-width: 676px) {
-        height: 130px;
+        height: 140px;
+        padding-right: 0pt;
     }
 
     img {
