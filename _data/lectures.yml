@@ -208,8 +208,8 @@
 
 - date: Thu 04/04/24
   title:
-    - Large language models and impact of scale
-    - In-context learning and prompting
+    - Language model training
+    - Language model evaluation and probing
   slides:
   readings:
   optional:
@@ -228,8 +228,7 @@
 - date: Thu 04/11/24
   lecturer: Arman
   title:
-    - Language model training
-    - Language model evaluation and probing
+    - AI safety and ethics
   slides:
   readings:
   optional:
