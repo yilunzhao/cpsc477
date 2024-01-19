@@ -102,3 +102,16 @@ Students must complete a final research project on a topic of their choice relat
 
 ## Diversity statement
 We embrace and celebrate diversity, understanding that the richest learning experiences come from the exchange of ideas among individuals from varied backgrounds, cultures, and perspectives. We uphold a commitment to mutual respect and open-mindedness, encouraging each participant to both share their unique insights and actively listen to others. Recognizing that learning is a collaborative and evolving process, we foster an inclusive environment where constructive criticism is welcomed, mistakes are embraced as opportunities for growth, and every student is both a teacher and a learner. Our goal is to cultivate a dynamic, respectful, and inclusive classroom environment. 
+
+
+## FAQs
+
+- What if I am unable to attend the class?  
+A: If a student frequently misses classes or can't attend a significant part of the course we recommend dropping the course.
+
+- How to audit the course?  
+A: We welcome Yale students to audit the course! If you want to actually master the material of the class, we very strongly recommend that auditors do all the assignments. However due to high demand we cannot grade assignments. Also please do not use course resources such as TA or instructor time.
+
+
+- Will the lectures be recorded?  
+A: This course is in-person, and regular attendance is mandatory. Some lectures might be recorded for future use, but regular, high-quality video recordings aren't assured. Students should plan assuming there won't be recordings. Those who can't attend in person should NOT take the course. 
