@@ -38,17 +38,18 @@
     - Jurafsky & Martin Chapter 4
     - Jurafsky & Martin Chapter 3
   optional:
+    - The Hitchhiker’s Guide to Testing Statistical Significance in Natural Language Processing (Dror et al., 2018) [link](https://aclanthology.org/P18-1128.pdf)
   logistics:
 
 - date: Thu 01/25/24
   lecturer:
     - Arman
   title:
-    - Word embeddings
+    - Word embeddings and vector semantics
   notes:
   slides:
   readings:
-    - Jurafsky & Martin Chapter 3
+    - Jurafsky & Martin Chapter 6
   optional:
   logistics: HW1 out
 
