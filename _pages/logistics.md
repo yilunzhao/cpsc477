@@ -78,7 +78,8 @@ For class projects we expect graduate students to work on a research problem (Th
 
 #### Class project (**40%**)
 
-Students must complete a final research project on a topic of their choice related to the class. The students can optionally team up with other students but the team size is limited to 2 students. (In rare cases and depending on the scope of the proposed project, a group of size 3 may be also allowed.) 
+Students must complete a final research project on a topic of their choice related to the class. The students should team up with other students and the team size is limited to 2 to 3 students.
+If you don't choose a team you will be randomly assigned a team mate. Invidiual projects are allowed only in exceptional cases and by providing reasonable justification.
 
 -   **5%**: proposal
     -   Students should submit a 1-2 page proposal for their project. The proposal should state and motivate the problem, and position the proposed project within related work. The project proposal should also include a brief description of the approach as well as the experimental plan (e.g., baselines, datasets, etc) to validate the effectiveness of the approach. Here are some ideas on types of projects.:
