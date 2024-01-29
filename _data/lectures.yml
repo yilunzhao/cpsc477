@@ -52,16 +52,18 @@
   readings:
     - Jurafsky & Martin Chapter 6
   optional:
-  logistics: HW1 out
+  logistics: HW1 out 1/29
 
 - date: Tues 01/30/24
   lecturer:
     - Arman
   title:
-    - Entropy and information theory
+    - Word embeddings and vector semantics (cont.)
   slides:
   readings:
+    - Jurafsky & Martin Chapter 6
   optional:
+    - Word2vec Explained- deriving Mikolov et al.'s negative-sampling word-embedding method (Goldberg and Levy, 2014) [link](https://arxiv.org/pdf/1402.3722.pdf)
   logistics:
 
 - date: Thu 02/01/24
@@ -94,7 +96,7 @@
   slides:
   readings:
   optional:
-  logistics: HW 1 due; <br/> <strong>2/9</strong> Project teams due
+  logistics: <strong>2/11</strong> HW 1 due
 
 - date: Tues 02/13/24
   lecturer:
@@ -106,7 +108,7 @@
   slides:
   readings:
   optional:
-  logistics:
+  logistics: <br/>  Project teams due
 
 - date: Thu 02/15/24
   lecturer:
