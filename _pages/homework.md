@@ -26,7 +26,7 @@ Please see the instructions and the notebook here: [Colab-1](https://colab.resea
 The third part is implementation of a `Word2Vec` SkipGram model. 
 A Colab notebook is provided to guide you through the process of implementing the model from scratch and training it on a toy data sample. 
 You will be completing the parts indicated with `# TODO: Implement` and submit the completed notebook.
-Please see the instructions and the notebook here: [Colab-2]().
+Please see the instructions and the notebook here: [Colab-2](https://colab.research.google.com/drive/11PSsPWg-xCeQagxubkyFEdllPuXh3Jm6?usp=sharing).
 
 
 ---
