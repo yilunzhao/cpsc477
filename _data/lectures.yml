@@ -60,9 +60,12 @@
   title:
     - Word embeddings and vector semantics (cont.)
   slides:
+    - https://yaleedu-my.sharepoint.com/:b:/g/personal/arman_cohan_yale_edu/EY6Box1cMrVAtYjez9RzYeMBF-3Uuxhs5jnrLTF3zyLlyw?e=zheh6y
   readings:
     - Jurafsky & Martin Chapter 6
   optional:
+    - Distributed Representation of Words and Phrases and their Compositionality (Mikolov et al., 2013) [link](https://arxiv.org/pdf/1310.4546.pdf)
+    - Efficient Estimation of Word Representations in Vector Space (Mikolov et al., 2013) [link](https://arxiv.org/pdf/1301.3781.pdf)
     - Word2vec Explained- deriving Mikolov et al.'s negative-sampling word-embedding method (Goldberg and Levy, 2014) [link](https://arxiv.org/pdf/1402.3722.pdf)
   logistics:
 
