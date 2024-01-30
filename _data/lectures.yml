@@ -77,6 +77,11 @@
   optional:
   logistics:
 
+- date: Fri 02/02/24 <br/> 2:00-3:00pm
+  lecturer:
+    - Rohan
+  recitation: Numpy and Pytorch Tutorial Session
+
 - date: Tues 02/06/24
   lecturer:
     - Arman

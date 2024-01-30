@@ -23,7 +23,8 @@ description: Note - This schedule is tentative and subject to change as the seme
 {% endif %}
 {% assign prev_date = lecture_date %}
 
-<tr class="{{ event_type }}">
+
+<tr class="{{ event_type }}{% if lecture.recitation != blank %} recitation-row{% elsif lecture.title contains 'Midterm' %} midterm-row{% elsif lecture.title contains 'recess' %} recess-row{% endif %}">
     <th scope="row">{{ lecture.date }}</th>
     {% if lecture.recitation != blank %} 
     {% assign recitation_count = recitation_count | plus: 1 %}

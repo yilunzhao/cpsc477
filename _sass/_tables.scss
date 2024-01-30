@@ -26,6 +26,21 @@ table {
   }
 }
 
+.recitation-row {
+  background-color: #ffeede;
+  /* pale yellow */
+}
+
+.midterm-row {
+  background-color: #dee9ff;
+  /* pale yellow */
+}
+
+.recess-row {
+  background-color: #d6d6d6;
+  /* pale yellow */
+}
+
 caption {
   padding-top: $table-cell-padding;
   padding-bottom: $table-cell-padding;
