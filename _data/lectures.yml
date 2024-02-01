@@ -73,10 +73,11 @@
   lecturer:
     - Arman
   title:
-    - Context-Free Grammars and Constituency Parsing
-    - Dependency Parsing
-  slides:
+    - Information theory
+    - Sequence labeling
+  slides: https://yaleedu-my.sharepoint.com/:b:/g/personal/arman_cohan_yale_edu/EVf6bDfRzuBMrkX-WlODkP4B7Yj_j-ZzcJE3ONYlRtkLZg?e=9YpQ0b
   readings:
+    - Eisenstein Chapter 7
   optional:
   logistics:
 
@@ -89,8 +90,8 @@
   lecturer:
     - Arman
   title:
-    - Hidden Markov Models
-    - Structured prediction
+    - Context free grammars
+    - Parsing
   slides:
   readings:
   optional:
