@@ -64,9 +64,9 @@
   readings:
     - Jurafsky & Martin Chapter 6
   optional:
-    - Distributed Representation of Words and Phrases and their Compositionality (Mikolov et al., 2013) [link](https://arxiv.org/pdf/1310.4546.pdf)
-    - Efficient Estimation of Word Representations in Vector Space (Mikolov et al., 2013) [link](https://arxiv.org/pdf/1301.3781.pdf)
-    - Word2vec Explained- deriving Mikolov et al.'s negative-sampling word-embedding method (Goldberg and Levy, 2014) [link](https://arxiv.org/pdf/1402.3722.pdf)
+    - Distributed Representation of Words and Phrases and their Compositionality (Mikolov et al., 2013) <a href="https://arxiv.org/pdf/1310.4546.pdf" target="_blank">[link]</a>
+    - Efficient Estimation of Word Representations in Vector Space (Mikolov et al., 2013) <a href="https://arxiv.org/pdf/1301.3781.pdf" target="_blank">[link]</a>
+    - Word2vec Explained- deriving Mikolov et al.'s negative-sampling word-embedding method (Goldberg and Levy, 2014) <a href="https://arxiv.org/pdf/1402.3722.pdf" target="_blank">[link]</a>
   logistics:
 
 - date: Thu 02/01/24
@@ -90,12 +90,16 @@
   lecturer:
     - Arman
   title:
-    - Context free grammars
-    - Parsing
+    - Sequential classification
+    - Conditional Random Fields
   slides:
-    - https://yaleedu-my.sharepoint.com/:b:/g/personal/arman_cohan_yale_edu/EVf6bDfRzuBMrkX-WlODkP4BS31vcrj_UHO6poLra_Jh6w?e=3lof2E
+    - https://yaleedu-my.sharepoint.com/:b:/g/personal/arman_cohan_yale_edu/ESkwTVFmFANPq9U86kZvCOoB-Bu8lFg_ssY8Xa0zsBT8PQ?e=bn8umm
   readings:
+    - Eisenstein 7.1-7.3
+    - Micheal Collins' notes on CRFs <a href="http://www.cs.columbia.edu/~mcollins/crf.pdf" target="_blank">[link]</a>
   optional:
+    - Lafferty et al. (2001) Conditional Random Fields- Probabilistic Models for Segmenting and Labeling Sequence Data <a href="https://repository.upenn.edu/cgi/viewcontent.cgi?article=1162&context=cis_papers" target="_blank">[link]</a>
+    - Sutton and McCallum (2010) An Introduction to Conditional Random Fields <a href="https://people.cs.umass.edu/~mccallum/papers/crf-tutorial.pdf" target="_blank">[link]</a>
   logistics:
 
 - date: Thu 02/08/24
