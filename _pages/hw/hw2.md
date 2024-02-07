@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /homework/hw2
+permalink: /homework/hw2/
 title: HW 2 - Language Modeling and Part of Speech Tagging
 ---
 
