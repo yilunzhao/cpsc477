@@ -1,12 +1,12 @@
 ---
 layout: page
-permalink: /homework/hw2/
+permalink: /homework/hw2
 title: HW 2 - Language Modeling and Part of Speech Tagging
 ---
 
 _TA in charge: Yilun Zhao_
 
-Published: Thursday, February 8, 2024
+Published: [TODO]
 
 Due: [TODO]
 
@@ -15,14 +15,17 @@ In this assignment we will:
 1. Go through the basics of NLTK, the most popular NLP library for Python; 
 2. Develop and evaluate several language models;
 3. Develop and evaluate a full part-of-speech (POS) tagger using the Viterbi algorithm; 
-4. Develop and evaluate a BiLSTM-CRF-based POS tagger;
+4. Train a BiLSTM-based POS tagger;
 
 This document is structured in the following sequence: 
 1. [Basic NLTK Tutorial](#1-basic-nltk-tutorial)
 2. [Provided Files and Report](#2-provided-files-and-report)
-3. [Part A: Language Models](#part-a-language-models-6-points)
-4. [Part B: Implementing Naive POS Tagging](#part-b-implementing-naive-pos-tagging-8-points)
-5. [Part C: Implementing Advanced POS Tagging with BiLSTM-CRF](#part-c-implementing-advanced-pos-tagging-with-bilstm-crf-2-points-1-bonus-points)
+3. [Part A: Language Models](#part-a-language-models-6-points) (2 points)
+4. [Part B: Implementing Naive POS Tagging](#part-b-implementing-naive-pos-tagging) (8.5 points)
+5. [Part C: Training Neural POS Tagging](#part-c-training-neural-pos-tagging) (2.5 points)
+6. [Homework Submission](#homework-submission) 
+
+Total: 13 points
 
 
 
@@ -103,7 +106,7 @@ patterns = [(r".*ing$", "VBG"),(r".*ed$", "VBD"),(r".*es$", "VBZ"),(r".*ed$", "V
 regexp_tagger.tag(tokens)
 ```
 
-See how many affix patterns you can come up with for your `regexp_tagger` up to a maximum of 10 rules. In what situations might this `regexp_tagger` report the wrong tags? Include your rules and some example situations this in your `HW1_Report.ipynb` file (see below).
+See how many affix patterns you can come up with for your `regexp_tagger` up to a maximum of 10 rules. In what situations might this `regexp_tagger` report the wrong tags? Include your rules and some example situations this in your `HW2_Report.ipynb` file (see below).
 
 #### Step 6: N-gram HMM Tagger (Statistical)
 lthough there are many different kinds of statistical taggers, we will only work with Hidden Markov Model (HMM) taggers in this assignment.
@@ -158,79 +161,51 @@ We have provided the following files:
 - `data/wikicorpus_tagged_dev.txt` - Tagged Wikicorpus development data
 - `perplexity.py` - A script to analyze perplexity for part A
 - `pos.py` - A script to analyze POS tagging accuracy for part B
-- `neural_tagger_model.py` - A neural POS tagger model
-- `tagger.pt.model` - Model with trained parameters for the neural tagger
+- `bilstm_tagger_model.py` - A neural POS tagger model
 - `solutionsA.py` - Skeleton code for part A
 - `solutionsB.py` - Skeleton code for part B
-- `solutionsC.py` - A script to train and evaluate a Spanish tagger for part C
-- `solutionsD.py` - A script to evaluate the neural tagger from for part D
-- `HW1_Report.ipynb` - A python notebook template for your report
+- `solutionsB7.py` - A script to evaluate a Spanish tagger for B7
+- `solutionsC.py` - A script to evaluate the neural tagger from for part C
+- `HW2_Report.ipynb` - A python notebook template for your report
 - `output/` - Directory where answers to part A, B, and C are stored
 
-The only files that you should modify throughout the whole assignment are `solutionsA.py`, `solutionsB.py`, and `HW1_Report.ipynb`.
+The only files that you should modify throughout the whole assignment are `solutionsA.py`, `solutionsB.py`, and `HW2_Report.ipynb`.
 
 #### Data Files Format
 The untagged data files have one sentence per line, and the tokens are separated by spaces. The tagged data files are in the same format, except that, instead of tokens separated by spaces, those files have `TOKEN/TAG` pairs separated by spaces.
 
 #### Report
-Before starting the assignment, go to `HW1_Report.ipynb` and include your name and netID in the header. Throughout the assignment, you will be asked to include specific output or comment on specific aspects of your work into `HW1_Report.ipynb`. We recommend filling the `HW1_Report.ipynb` file as you go through the assignment, as opposed to starting the report afterwards.
+Before starting the assignment, go to `HW2_Report.ipynb` and include your name and netID in the header. Throughout the assignment, you will be asked to include specific output or comment on specific aspects of your work into `HW2_Report.ipynb`. We recommend filling the `HW2_Report.ipynb` file as you go through the assignment, as opposed to starting the report afterwards.
 
 In this report it is not necessary to include introductions and/or explanations, other than the ones explicitly requested throughout the assignment.
 
-The first thing to report in the `HW1_Report.ipynb` is the affix patterns you came up with for your `regexp_tagger` and some situations (with brief explanation) where the tagger didn’t work.
+The first thing to report in the `HW2_Report.ipynb` is the affix patterns you came up with for your `regexp_tagger` and some situations (with brief explanation) where the tagger didn’t work.
 
-### Part A: Language Models (6 points)
+### Part A: Language Models
 In this part of the assignment, you will be filling the `solutionsA.py` file. Open the file and notice there are several functions with a `#TODO`` comment; you will have to complete those functions. To understand the general workflow of the script, read the `main()` function but do not modify it. You also shouldn’t import any additional libraries/functions beyond what is already provided, but you also don’t have to use everything that’s provided if you can find a solution that works without something.
 
-#### A.1: Implementing N-Gram Log-Probabilities in Language Modeling (1 point)
-Calculate the uni-, bi-, and trigram log-probabilities of the data in `data/Brown_train.txt`. This corresponds to implementing the `calc_probabilities()` function. In this assignment we will always use **log base 2**. (Remember that n-gram probabilities are calculated as *the probability of the nth tag conditioned on the first n-1 tags*. It’s not the joint probability of the entire n-gram.)
-
-Don’t forget to add the appropriate sentence start and end symbols; use the provided constants `START_SYMBOL` and `STOP_SYMBOL` in the skeleton code. You may or may not use NLTK to help you here.
-
-The code will automatically output the log probabilities in a file `output/A1.txt`. Here’s a few examples of log probabilities of uni-, bi-, and trigrams for you to check your results:
-
-```python
-UNIGRAM captain -14.280981989874268
-UNIGRAM captain’s -17.088336911931872
-UNIGRAM captaincy -19.410265006819234
-BIGRAM and religion -12.931660898852277
-BIGRAM and religious -11.346698398131123
-BIGRAM and religiously -13.931660898852277
-TRIGRAM and not a -4.029747343394052
-TRIGRAM and not by -4.614709844115208
-TRIGRAM and not come -5.614709844115209
-```
-
-If they do match, include in your `HW1_Report.ipynb` the log probabilities to **four decimal places** of the following n-grams (note the n-grams are case-sensitive):
-
-```python
-UNIGRAM natural
-BIGRAM natural that
-TRIGRAM natural that he
-```
-
-#### A.2 Evaluating N-Gram Model Performance and Calculating Corpus Perplexity (1 point)
+#### A1 Evaluating N-Gram Model Performance and Calculating Corpus Perplexity (1 point)
 Use your models to find the log-probability, or score, of each sentence in the Brown training data with each n-gram model. This corresponds to implementing the `score()` function.
 
-Make sure to accommodate the possibility that you may encounter in the sentences an n-gram that doesn’t exist in the training corpus. This will not happen now, because we are computing the log-probabilities of the training sentences, but it will be necessary for question 5. If you find any n-gram that was not in the training sentences, set the whole sentence log-probability to the constant `MINUS_INFINITY_SENTENCE_LOG_PROB`.
+Make sure to accommodate the possibility that you may encounter in the sentences an n-gram that doesn’t exist in the training corpus. If you find any n-gram that was not in the training sentences, set the whole sentence log-probability to the constant `MINUS_INFINITY_SENTENCE_LOG_PROB`.
 
-The code will output scores in three files: `output/A2.uni.txt`, `output/A2.bi.txt`, `output/A2.tri.txt`. These files simply list the log-probabilities of each sentence for each different model. Here’s what the first few lines of each file look like:
+The code will output scores in three files: `output/A1.uni.txt`, `output/A1.bi.txt`, `output/A1.tri.txt`. These files simply list the log-probabilities of each sentence for each different model. Here’s what the first few lines of each file look like:
 
-`A2.uni.txt`:
+`A1.uni.txt`:
 ```
 -178.7268354828613
 -259.8586443200647
 -143.330429890216
 ```
 
-`A2.bi.txt`:
+`A1.bi.txt`:
 ```
 -92.10399842763805
 -132.09662640739958
 -90.1859108420144
 ```
 
-`A2.tri.txt`:
+`A1.tri.txt`:
 ```
 -26.180045341283773
 -59.85310080740878
@@ -242,54 +217,27 @@ Now, you need to run our perplexity script, `perplexity.py`, on each of these fi
 python perplexity.py <file of scores> <file of sentences that were scored>
 ```
 
-where `<file of scores>` is one of the A2 output files and `<file of sentences that were scored>` is data/Brown_train.txt. Include the perplexity of the corpus for the three different models in your HW1_Report . Here’s what our script printed when `<file>` was `output/A2.uni.txt` (truncated at four decimal places).
+where `<file of scores>` is one of the A1 output files and `<file of sentences that were scored>` is data/Brown_train.txt. Include the perplexity of the corpus for the three different models in your HW1_Report . Here’s what our script printed when `<file>` was `output/A1.uni.txt` (truncated at four decimal places).
 
 ```
-python perplexity.py output/A2.uni.txt data/Brown_train.txt
+python perplexity.py output/A1.uni.txt data/Brown_train.txt
 The perplexity is 1052.4865
 ```
 
-#### A.3: Implementing Linear Interpolation (1 point)
-Implement [linear interpolation](https://en.wikipedia.org/wiki/Linear_interpolation) among the three n-gram models you have created. This corresponds to implementing the `linearscore()` function.
-
-Linear interpolation is a method that aims to derive a better tagger by using all three uni-, bi-, and trigram taggers at once. Each tagger is given a weight described by a parameter lambda. There are some excellent methods for approximating the best set of lambdas, but for now, set the value of all three lambdas to be equal (i.e., 1/3).
-
-The code outputs scores to `output/A3.reg.txt`. The first few lines of this file look like (truncated at four decimal places):
-```python
--46.58916389729883
--85.77421558996585
--58.54420241627359
--47.516505194800494
--52.73873608147342
-```
-
-Run the perplexity script on the output file and include the perplexity in your `HW1_Report.ipynb`.
-
-#### A.4: Tuning Lambda Values and Analyzing Results (1 point)
-
-In the `linearscore_newlambdas()` function, duplicate your `linearscore()` function but experiment with different values of lambda to see if you can improve the perplexity score. You don’t have to use the methods from Jurafsky Martin but if you want to try implementing them, go for it! (I’d recommend just toying around with them manually, though, as you will need to spend a decent amount of time on part B.) In the `HW1_Report.ipynb` file, include the values of your new lambdas and explain why you think they might have improved the performance.
-
-#### A.5: Comparative Analysis (1 point)
-Briefly answer in your HW1_Report.ipynb the following questions: 
-
-```
-Question: When you compare the performance (perplexity) between the best model without interpolation and the best model with linear interpolation, is the result you got expected? Explain why. (max 60 words, but 30 is fine too!)
-```
-
-#### A.6: Identifying Brown Dataset Sample via Perplexity Scores (1 point)
-Both `data/Sample1.txt` and `data/Sample2.txt` contain sets of sentences; one of the files is an excerpt of the Brown training dataset. Use your model to score the sentences in both files. Our code outputs the scores of each into `output/Sample1_scored.txt` and `output/Sample2_scored.txt`. Run the perplexity script on both output files and include the perplexity output of both samples in your `HW1_Report.ipynb`. 
+#### A2: Identifying Brown Dataset Sample via Perplexity Scores (1 point)
+Both `data/Sample1.txt` and `data/Sample2.txt` contain sets of sentences; one of the files is an excerpt of the Brown training dataset. Use your model to score the sentences in both files. Our code outputs the scores of each into `output/Sample1_scored.txt` and `output/Sample2_scored.txt`. Run the perplexity script on both output files and include the perplexity output of both samples in your `HW2_Report.ipynb`. 
 
 *Use these results to make an argument for which sample belongs to the Brown dataset and which does not.*
 
-### Part B: Implementing Naive POS Tagging (8 points)
+### Part B: Implementing Naive POS Tagging
 In this part of the assignment, you will be filling the `solutionsB.py` file. Open the file and notice there are several functions with a `#TODO` comment; you will have to complete those functions. To understand the general workflow of the script, read the `main()` function, but do not modify it. 
 
-#### B.1: Data Preparation - Splitting Words and Tags in the Brown Corpus (1 point)
-First, you must separate the tags and words in `Brown_tagged_train.txt`. This corresponds to implementing the `split_wordtags()` function. You’ll want to store the sentences without tags in one data structure, and the tags alone in another (see instructions in the code). Make sure to add sentence start and stop symbols to both lists (of words and tags). Use the constants `START_SYMBOL` and `STOP_SYMBOL` already provided. You don’t need to write anything on `HW1_Report.ipynb` about this question.
+#### B1: Data Preparation - Splitting Words and Tags in the Brown Corpus (1 point)
+First, you must separate the tags and words in `Brown_tagged_train.txt`. This corresponds to implementing the `split_wordtags()` function. You’ll want to store the sentences without tags in one data structure, and the tags alone in another (see instructions in the code). Make sure to add sentence start and stop symbols to both lists (of words and tags). Use the constants `START_SYMBOL` and `STOP_SYMBOL` already provided. You don’t need to write anything on `HW2_Report.ipynb` about this question.
 
 Hint: make sure you accommodate words that themselves contain backslashes – i.e., `1/2` is encoded as `1/2/NUM` in tagged form; make sure that the token you extract is `1/2` and not `1`.
 
-#### B.2: Calculating Tag Trigram Probabilities (1 point)
+#### B2: Calculating Tag Trigram Probabilities (1 point)
 Now, calculate the trigram probabilities for the tags. This corresponds to implementing the calc_trigrams () function. The code outputs your results to a file `output/B2.txt`. Here are a few lines (not contiguous) of this file for you to check your work:
 ```
 TRIGRAM * * ADJ -5.205575150818023
@@ -299,7 +247,7 @@ TRIGRAM X . STOP -1.9292269255866192
 ```
 
 
-After you checked your algorithm is giving the correct output, add to your `HW1_Report.ipynb` the log probabilities of the following trigrams:
+After you checked your algorithm is giving the correct output, add to your `HW2_Report.ipynb` the log probabilities of the following trigrams:
 ```
 TRIGRAM CONJ ADV ADP
 TRIGRAM DET NOUN NUM
@@ -308,10 +256,10 @@ TRIGRAM NOUN PRT PRON
 
 **Note**: you might wish to reuse a function you wrote in part A to make your life easier.
 
-#### B.3: Data Preprocessing for Handling Rare Words (1 point)
+#### B3: Data Preprocessing for Handling Rare Words (1 point)
 The next step is to implement a smoothing method. To prepare to add smoothing, replace every word that occurs five or fewer times with the token specified in the constant `RARE_SYMBOL`. This corresponds to implementing the `calc_known()` and `replace_rare()` functions.
 
-First, you will create a list of words that occur more than five times in the training data. When tagging, any word that does not appear in this list should be replaced with the token in `RARE_SYMBOL`. You don’t need to write anything on `HW1_Report.ipynb` about this question. The code outputs the new version of the training data to `output/B3.txt`. Here are the first two lines of this file:
+First, you will create a list of words that occur more than five times in the training data. When tagging, any word that does not appear in this list should be replaced with the token in `RARE_SYMBOL`. You don’t need to write anything on `HW2_Report.ipynb` about this question. The code outputs the new version of the training data to `output/B3.txt`. Here are the first two lines of this file:
 
 ```
 At that time highway engineers traveled rough and dirty roads to accomplish
@@ -322,7 +270,7 @@ _RARE_ _RARE_ vehicles was a personal _RARE_ for such employees , and the matter
 
 **Hint**: if you use a set instead of a list to store frequently occurring words, this operation will be faster. A set is python’s implementation of a hash table and has constant time membership checking, as opposed to a list, which has linear time checking.
 
-#### B.4: Calculating Emission Probabilities in the Preprocessed Dataset (1 point)
+#### B4: Calculating Emission Probabilities in the Preprocessed Dataset (1 point)
 Next, we will calculate the emission probabilities on the modified dataset. This corresponds to imple- menting the `calc_emission()` function. The code outputs your results to a file `output/B4.txt`. Here are a few lines (not contiguous) from this file for you to check your work:
 ```
 America NOUN -10.9992
@@ -331,7 +279,7 @@ New ADJ -8.1884
 York NOUN -10.7119
 ```
 
-After you check that your algorithm is giving the correct output, add to your `HW1_Report.ipynb` the log probabilities of the following emissions (note words are case-sensitive):
+After you check that your algorithm is giving the correct output, add to your `HW2_Report.ipynb` the log probabilities of the following emissions (note words are case-sensitive):
 
 ```
 **
@@ -342,7 +290,7 @@ STOP STOP
 _RARE_ VERB
 ```
 
-#### B.5: Implementing Viterbi Algorithm for HMM Taggers (2 points)
+#### B5: Implementing Viterbi Algorithm for HMM Taggers (2 points)
 
 Now, implement the Viterbi algorithm for HMM taggers. The Viterbi algorithm is a dynamic program- ming algorithm that has many applications. For our purposes, the Viterbi algorithm is a comparatively efficient method for finding the highest scoring tag sequence for a given sentence. Please read about the specifics about this algorithm in section 8.4 of the book.
 
@@ -363,7 +311,7 @@ Note that, while the output doesn’t have the `_RARE_` token, you still have to
 
 When exploring the space of possibilities for the tags of a given word, make sure to only consider tags with emission probability greater than zero for that given word. Also, when accessing the transition probabilities of tag trigrams, use -1000 (constant `LOG_PROB_OF_ZERO` in the code) to represent the log-probability of an unseen transition.
 
-Once you run your implementation, use the part of speech evaluation script pos.py to compare the output file with `Brown_tagged_dev.txt`. Include the accuracy of your tagger in the `HW1_Report.ipynb` file. To use the script, run the following command:
+Once you run your implementation, use the part of speech evaluation script pos.py to compare the output file with `Brown_tagged_dev.txt`. Include the accuracy of your tagger in the `HW2_Report.ipynb` file. To use the script, run the following command:
 
 ```
 python pos.py output/B5.txt data/Brown_tagged_dev.txt
@@ -376,7 +324,7 @@ Percent correct tags: 93.3250
 
 Do what you can to make your algorithm as efficient as possible! While we won’t give you specifics, you should think about the order in which you check the words of the trigrams, which words and/or tags you can ignore, etc. For reference, our solution runs in 11-12 seconds. This algorithm is tricky enough to implement, let alone optimize, so don’t be disheartened if you can’t get it to run at lightning speed! While we will give points [TO CHECK] for efficiency, it’ll only be a small portion of your assignment grade.
 
-#### B.6: Implementing  NLTK’s Trigram Tagger Set (1 point)
+#### B6: Implementing  NLTK’s Trigram Tagger Set (1.5 point)
 Finally, create an instance of NLTK’s trigram tagger set to back off to NLTK’s bigram tagger. Let the bigram tagger itself back off to NLTK’s default tagger using the tag `NOUN`. Implement this in the `nltk_tagger()` function. The code outputs your results to a file `output/B6.txt`, and this is how the first two lines of this file should look:
 
 ```
@@ -388,13 +336,13 @@ The/NOUN purpose/NOUN of/ADP this/DET fourth/ADJ voyage/NOUN was/VERB clear/ADJ
 ./.
 ```
 
-Use `pos.py` to evaluate the NLTK’s tagger accuracy and put the result in your `HW1_Report.ipynb`. This is the accuracy that we got with our implementation:
+Use `pos.py` to evaluate the NLTK’s tagger accuracy and put the result in your `HW2_Report.ipynb`. This is the accuracy that we got with our implementation:
 
 ```
 Percent correct tags: 88.0399
 ```
 
-#### B.7: POS Tagging for Spanish (1 point)
+#### B7: POS Tagging for Spanish (1 point)
 In this part, you will be using `solutionsB2.py`. To understand the general workflow of the script, read the `main()` function, but do not modify it. Note that `solutionsB2.py` uses functions from `solutionsB.py`. 
 
 This part uses a corpus other than the Brown corpus. The training data comes from Wikicorpus, a trilingual corpus using passages from Wikipedia. We will be using the Spanish portion to train and evaluate a part- of-speech tagger.
@@ -411,13 +359,13 @@ This program will likely take a lot longer to run than `solutionsB.py`. Run the 
 python pos.py output/C5.txt data/wikicorpus_tagged_dev.txt
 ```
 
-In your `HW1_Report.ipynb`, record the accuracy of your tagger for Spanish. Our implementation of the Spanish tagger achieved the following performance (to three decimal places):
+In your `HW2_Report.ipynb`, record the accuracy of your tagger for Spanish. Our implementation of the Spanish tagger achieved the following performance (to three decimal places):
 
 ```
 Percent correct tags: 84.472
 ```
 
-In your `HW1_Report.ipynb`, answer the following questions:
+In your `HW2_Report.ipynb`, answer the following questions:
 
 ```
 Question 1: The Spanish dataset takes longer to evaluate. Why do you think this is the case?
@@ -425,8 +373,48 @@ Question 1: The Spanish dataset takes longer to evaluate. Why do you think this 
 Question 2: What are aspects or features of a language that may improve tagging accuracy that are not captured by the tagged training sets?
 ```
 
-### Part C: Comparing with Neural Methods (1 point + 1 bonus points)
-In this part of the assignment, you will compare your HMM based tagger with an existing neural network- based model based on BiLSTM-CRF, implemented in [PyTorch Tutorial](https://pytorch.org/tutorials/beginner/nlp/advanced_tutorial.html). 
+### Part C: Training Neural POS Tagging
+In this part of the assignment, you will train a neural network-based model for POS tagging. The implementation utilizes a neural network known as bidirectional LSTM, which is a method for sequence learning. For this assignment, we have already provided the implementation of the model and training in `bilstm_tagger_model.py``. Your task is to understand the code, answer relevant questions regarding the model's design and implementation, and then proceed to train and evaluate the model using the provided dataset.
 
-For this assignment, we have already trained the model on the Brown corpus in English. You simply have to evaluate this neural model. You will evaluate tagger.pt.model, the trained model by running:
+#### C1: Understanding the Implementation (1.5 point)
+Read through the code in `neural_tagger_model.py`. You should understand the general structure of the model and how it is trained. In your `HW2_Report.ipynb`, answer the following questions:
+
+- Q1: What is the purpose of the `simplify_token` function in data preprocessing?
+- Q2: What is the purpose of introducing the special PAD symbol?
+- Q3: What is the initialization strategy of the word embedding layer in our implementation? (Hint: Refer to line 110)
+
+#### C2: Training the Model (0.5 point)
+In this part, you will train the model using the provided training data. To do this, run the following command:
+```
+python bilstm_tagger_model.py
+```
+The model will be trained for 5 epochs. After training, the model will be saved to `tagger.pt.model`. You need to attached this file to your submission.
+
+#### C3: Evaluating the Model (0.5 point)
+After training, you will evaluate the model using the provided development data. To do this, run the following command:
+```
+python solutionsC.py
+```
+This will output the accuracy of the model. Record the accuracy in your `HW2_Report.ipynb`. Our implementation of the neural tagger achieved the following performance (to three decimal places):
+
+```
+Test Accuracy: 93.727
+```
+Test accuracy greater than 90.0 will receive full credit. 
+
+
+### Homework Submission
+Before submission, run all of your code within `HW2_Report.ipynb` one more time. Make sure that you keep the output of each cell within `HW2_Report.ipynb`.
+
+Please package the following four files into a single ZIP file for submission. 
+
+```
+solutionsA.py
+solutionsB.py
+HW2_Report.ipynb
+tagger.pt.model
+```
+
+### Late Day Policy
+10% off for each day. After three days, the assignment will be given a score of zero.
 
